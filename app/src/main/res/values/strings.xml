@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Phones</string>
+    <string name="label_producer">Producent</string>
+    <string name="label_model">Model</string>
+</resources>
