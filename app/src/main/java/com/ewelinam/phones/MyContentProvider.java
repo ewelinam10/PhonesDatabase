@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.util.Log;
 
 //DOSTĘP DO DOSTAWCY TREŚCI ODBYWA SIĘ ZA POŚREDNICTWEM IDENTYFIKATORA URI( który jednoznacznie określa dostawcę )
 
@@ -31,7 +32,12 @@ public class MyContentProvider extends ContentProvider {
     @Override
     public boolean onCreate() {
         database = new MyOpenHelper(getContext());
+        SQLiteDatabase db = database.getReadableDatabase();
+        String path = db.getPath();
+        Log.d("path",path);
+        Log.d("bla","PROVIDER");
         return false;
+
     }
 
     @Nullable
